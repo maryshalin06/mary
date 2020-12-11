@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Event Planning App</string>
+    <string name="contentDescriptionImg1">introImg</string>
+    <string name="padding">5dp</string>
+    <string name="txt1">Welcome All</string>
+    <string name="btn1">"Let's get started "</string>
+    <string name="title2Txt">"About US "</string>
+    <string name="txt3Para">"  We here at Spruce love what we do. This is start up company started by a passionate woman \'Mary Shalin\' whose only goal is to provide solution to all your event management related problems. We know it\'s difficult for you manage an event with so many people around you with different requirements. We are a team of 20 working around the clock to provide you solutions and assist you in every possible way. "</string>
+    <string name="txt2Para">"  All you have to do is, select an event of your choice and we will list out different requirements that you will need for the event. As per your order we will make arrangements. You do not have to run errands in the last minute. We got you! Our team of volunteers will work on ground at the requested event location (or the one\'s we pick for you..yes, we do that too!!). All you need to do is login, select the type of event and give requirements as per the listing. You can cutomize the event settings, fix a date and pay. Voila !! All set to have a memorable event that you can cherish forever along with us. Come and join and get various discounts and benifits by becoming a member of our family. "</string>
+    <string name="btn2">Click here To Enjoy Our Services</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title3Txt">Hi member ! Welcome Back. Login In</string>
+    <string name="hint_username">"Enter your Username here "</string>
+    <string name="hint_pass">Enter password</string>
+    <string name="btn3">LOG IN</string>
+    <string name="txt6signup">New here? Register !</string>
+    <string name="btn4">Sign In</string>
+    <string name="select_your_theme">Select your theme</string>
+    <string name="txt_theme1">Wedding Party</string>
+    <string name="contentDesc">weddinf img</string>
+    <string name="txt_weddingtheme">Wedding Party</string>
+    <string name="descTitle">Wedding Planner</string>
+    <string name="desc">We know how hard it is to conduct a Wedding party. That\'s why we are here for you to help out with your wedding party plans and arrange everything for you. Once you select the required items below, we will be able to provide you with the services you need on time. Go ahead and keep selecting!</string>
+    <string name="selectTxt">"Select number of guests attending "</string>
+    <string name="guestTxt">Enter no. of guests attending</string>
+    <string name="btn_wedding">Confirm Booking</string>
+    <string name="do_you_require_a_wedding_cake">Do you require a wedding cake</string>
+    <string name="enter_numbers">enter numbers</string>
+    <string name="yes">yes</string>
+    <string name="select_number_of_volunteers_for_hire">Select number of volunteers for hire</string>
+    <string name="no">no</string>
+    <string name="txtTitleCal">Booking Confirmed !!</string>
+    <string name="txt_confirm">"Congrats !! You're booking has been confirmed. "</string>
+    <string name="reserve_msg">"Thank you for the Reservation! Your Booking has been confirmed. Your total amount is    dollars.You can pay on the day of service. "</string>
+    <string name="txt_email">"Having problems? Reach out to us by email 'spruce@gmail.com' "</string>
+    <string name="mail_btn">Send Email</string>
+    <string name="buttonemail">buttonEmail</string>
+    <string name="btn_home">Go back to Home Page</string>
+    <string-array name="noOfvolunteers">
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="themeWedding">
+        <item>Fairy Tale Theme</item>
+        <item>Garden Theme</item>
+        <item>Beach Theme</item>
+    </string-array>
+</resources>
