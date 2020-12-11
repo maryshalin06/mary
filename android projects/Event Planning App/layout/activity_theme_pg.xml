@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".theme_pg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtViewTheme"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:shadowColor="#FF9800"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:text="@string/select_your_theme"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/weddingPartyLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wedding" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_theme1"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/birthdayPartyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/birthday" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Birthday Party"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/gradCeremonyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/graduation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Graduation Ceremony"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/fundRaiserLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fund" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fund Raiser Event"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/halloweenEventLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/haloween" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Halloween Party"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#C0C0C0" />
+
+        <LinearLayout
+            android:id="@+id/workshopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/contentDesc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/workshops" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_theme6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Workshops/Seminar Events"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
