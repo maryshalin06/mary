@@ -8,11 +8,12 @@
 <style>
 body{
     margin:0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
     color:white;
     text-align:center;
     padding:40px 18px;
+    overflow-x:hidden;
 }
 
 .card{
@@ -25,13 +26,8 @@ body{
     box-shadow:0 10px 40px rgba(0,0,0,.4);
 }
 
-h1{
-    font-weight:600;
-    margin-bottom:10px;
-}
-
 .section{
-    margin:28px 0;
+    margin:26px 0;
     opacity:0;
     transform:translateY(25px);
     transition:.6s ease;
@@ -50,7 +46,17 @@ button{
     color:white;
     font-size:16px;
     cursor:pointer;
-    margin-top:20px;
+    margin:10px;
+    position:relative;
+}
+
+#question{
+    display:none;
+    margin-top:30px;
+}
+
+#noBtn{
+    background:#888;
 }
 
 .heart{
@@ -74,24 +80,19 @@ button{
 <div class="card">
 
 <h1>Happy Valentine’s Day ❤️</h1>
-<p>Don’t rush this. Just scroll slowly.</p>
 
-<div class="section">I didn’t plan to meet you.</div>
+<div class="section">Don’t read this fast.</div>
+<div class="section">Talking to you became my calm part of the day.</div>
+<div class="section">I like where this is going… at our pace.</div>
+<div class="section">— Mary</div>
 
-<div class="section">But talking to you became easy.</div>
+<button onclick="showQuestion()">Continue</button>
 
-<div class="section">And silence didn’t feel awkward.</div>
-
-<div class="section">I’m not forcing anything.</div>
-
-<div class="section">I just like that you exist in my days right now.</div>
-
-<div class="section">
-Happy Valentine’s Day 🤍<br>
-— <b>Revanth ❤️</b>
+<div id="question">
+    <h2>Will you be my Valentine? 💌</h2>
+    <button onclick="yesClicked()">Yes</button>
+    <button id="noBtn">No</button>
 </div>
-
-<button onclick="hearts()">Send hearts</button>
 
 </div>
 
@@ -105,19 +106,32 @@ function reveal(){
         if(top<trigger) sec.classList.add('show');
     });
 }
-
 window.addEventListener('scroll',reveal);
 reveal();
 
-function hearts(){
-    for(let i=0;i<30;i++){
+function showQuestion(){
+    document.getElementById("question").style.display="block";
+}
+
+// No button runs away + becomes yes
+const noBtn=document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover",()=>{
+    noBtn.innerText="Yes 😄";
+    const x=Math.random()*300-150;
+    const y=Math.random()*200-100;
+    noBtn.style.transform=`translate(${x}px,${y}px)`;
+});
+
+// yes clicked hearts
+function yesClicked(){
+    for(let i=0;i<40;i++){
         let heart=document.createElement("div");
         heart.innerHTML="❤️";
         heart.className="heart";
         heart.style.left=Math.random()*100+"vw";
         heart.style.animationDuration=(2+Math.random()*3)+"s";
         document.body.appendChild(heart);
-
         setTimeout(()=>heart.remove(),5000);
     }
 }
