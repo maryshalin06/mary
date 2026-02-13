@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
+<title>Happy Valentines Day Rev</title>
 
 <style>
 body{
@@ -13,30 +13,23 @@ body{
     color:white;
     text-align:center;
     padding:40px 18px;
-    overflow-x:hidden;
 }
 
 .card{
     max-width:600px;
-    margin:auto;
+    margin:18px auto;
+    padding:22px;
+    border-radius:18px;
     background:rgba(255,255,255,0.08);
-    padding:30px 22px;
-    border-radius:20px;
-    backdrop-filter: blur(14px);
-    box-shadow:0 10px 40px rgba(0,0,0,.4);
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 30px rgba(0,0,0,.4);
+    cursor:pointer;
+    transition:.4s;
 }
 
-.section{
-    margin:26px 0;
-    opacity:0;
-    transform:translateY(25px);
-    transition:.6s ease;
-}
+.card:hover{transform:scale(1.03);}
 
-.section.show{
-    opacity:1;
-    transform:translateY(0);
-}
+.hiddenText{display:none;font-size:18px;line-height:1.6;}
 
 button{
     background:#ff4fa3;
@@ -47,85 +40,97 @@ button{
     font-size:16px;
     cursor:pointer;
     margin:10px;
-    position:relative;
 }
 
-#question{
-    display:none;
-    margin-top:30px;
-}
-
-#noBtn{
-    background:#888;
-}
+#noBtn{background:#777;}
 
 .heart{
     position:fixed;
     top:-20px;
-    font-size:20px;
+    font-size:22px;
     animation:fall linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh);
-        opacity:0;
-    }
+    to{transform:translateY(110vh);opacity:0;}
 }
+
+iframe{display:none;}
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<h1>Happy Valentines Day Rev ❤️</h1>
 
-<h1>Happy Valentine’s Day ❤️</h1>
+<!-- MUSIC -->
+<iframe id="song" width="0" height="0"
+src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&loop=1&playlist=VIDEO_ID">
+</iframe>
 
-<div class="section">Don’t read this fast.</div>
-<div class="section">Talking to you became my calm part of the day.</div>
-<div class="section">I like where this is going… at our pace.</div>
-<div class="section">— Mary</div>
-
-<button onclick="showQuestion()">Continue</button>
-
-<div id="question">
-    <h2>Will you be my Valentine? 💌</h2>
-    <button onclick="yesClicked()">Yes</button>
-    <button id="noBtn">No</button>
+<div class="card" onclick="reveal(this)">
+<div class="front">Touch me</div>
+<div class="hiddenText">
+Thank you for showing up the way you do.<br>
+I really appreciate it.
+</div>
 </div>
 
+<div class="card" onclick="reveal(this)">
+<div class="front">Touch me</div>
+<div class="hiddenText">
+I didn’t expect you to become part of my everyday routine.<br>
+But somehow our conversations turned into comfort.
+</div>
+</div>
+
+<div class="card" onclick="reveal(this)">
+<div class="front">Touch me</div>
+<div class="hiddenText">
+I like that we don’t force things.<br>
+We just… continue.
+</div>
+</div>
+
+<div class="card" onclick="reveal(this)">
+<div class="front">Touch me</div>
+<div class="hiddenText">
+And that feels rare.<br>
+I like having you in my life.
+</div>
+</div>
+
+<div class="card" onclick="showQuestion(this)">
+<div class="front">Touch me</div>
+<div class="hiddenText">
+Shalin
+<br><br>
+Will you be my Valentine? 🤍
+<br><br>
+<button onclick="yesClicked(event)">Yes</button>
+<button id="noBtn" onmouseover="escapeBtn(this)">No</button>
+</div>
 </div>
 
 <script>
-const sections=document.querySelectorAll('.section');
-
-function reveal(){
-    const trigger=window.innerHeight*0.85;
-    sections.forEach(sec=>{
-        const top=sec.getBoundingClientRect().top;
-        if(top<trigger) sec.classList.add('show');
-    });
-}
-window.addEventListener('scroll',reveal);
-reveal();
-
-function showQuestion(){
-    document.getElementById("question").style.display="block";
+function reveal(card){
+    card.querySelector('.front').style.display="none";
+    card.querySelector('.hiddenText').style.display="block";
+    document.getElementById("song").style.display="block";
 }
 
-// No button runs away + becomes yes
-const noBtn=document.getElementById("noBtn");
+function showQuestion(card){
+    reveal(card);
+}
 
-noBtn.addEventListener("mouseover",()=>{
-    noBtn.innerText="Yes 😄";
-    const x=Math.random()*300-150;
-    const y=Math.random()*200-100;
-    noBtn.style.transform=`translate(${x}px,${y}px)`;
-});
+function escapeBtn(btn){
+    btn.innerText="Yes 😄";
+    btn.style.transform=`translate(${Math.random()*200-100}px,${Math.random()*100-50}px)`;
+}
 
-// yes clicked hearts
-function yesClicked(){
-    for(let i=0;i<40;i++){
+function yesClicked(e){
+    e.stopPropagation();
+    for(let i=0;i<45;i++){
         let heart=document.createElement("div");
         heart.innerHTML="❤️";
         heart.className="heart";
