@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    text-align:center;
+    padding:40px 18px;
+}
+
+.card{
+    max-width:600px;
+    margin:auto;
+    background:rgba(255,255,255,0.08);
+    padding:30px 22px;
+    border-radius:20px;
+    backdrop-filter: blur(14px);
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+h1{
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.section{
+    margin:28px 0;
+    opacity:0;
+    transform:translateY(25px);
+    transition:.6s ease;
+}
+
+.section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+button{
+    background:#ff4fa3;
+    border:none;
+    padding:14px 22px;
+    border-radius:14px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.heart{
+    position:fixed;
+    top:-20px;
+    font-size:20px;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Valentine’s Day ❤️</h1>
+<p>Don’t rush this. Just scroll slowly.</p>
+
+<div class="section">I didn’t plan to meet you.</div>
+
+<div class="section">But talking to you became easy.</div>
+
+<div class="section">And silence didn’t feel awkward.</div>
+
+<div class="section">I’m not forcing anything.</div>
+
+<div class="section">I just like that you exist in my days right now.</div>
+
+<div class="section">
+Happy Valentine’s Day 🤍<br>
+— <b>Your Name</b>
+</div>
+
+<button onclick="hearts()">Send hearts</button>
+
+</div>
+
+<script>
+const sections=document.querySelectorAll('.section');
+
+function reveal(){
+    const trigger=window.innerHeight*0.85;
+    sections.forEach(sec=>{
+        const top=sec.getBoundingClientRect().top;
+        if(top<trigger) sec.classList.add('show');
+    });
+}
+
+window.addEventListener('scroll',reveal);
+reveal();
+
+function hearts(){
+    for(let i=0;i<30;i++){
+        let heart=document.createElement("div");
+        heart.innerHTML="❤️";
+        heart.className="heart";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.animationDuration=(2+Math.random()*3)+"s";
+        document.body.appendChild(heart);
+
+        setTimeout(()=>heart.remove(),5000);
+    }
+}
+</script>
+
+</body>
+</html>
